@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Conteo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Ingresar valores de n, m e i
+        System.out.print("Ingrese el valor de n: ");
+        int n = scanner.nextInt();
+        
+        System.out.print("Ingrese el valor de m: ");
+        int m = scanner.nextInt();
+        
+        System.out.print("Ingrese el valor de i (incremento): ");
+        int i = scanner.nextInt();
+
+        // Conteo de n a m con incremento de i
+        for (int num = n; num <= m; num += i) {
+            System.out.println(num);
+        }
+        scanner.close();
+    }
+}
