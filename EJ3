@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class NumerosPrimos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Ingresar cantidad de números primos
+        System.out.print("Ingrese cuántos números primos desea ver: ");
+        int n = scanner.nextInt();
+        
+        int contador = 0;
+        int num = 2; // El primer número primo
+
+        // Imprimir los primeros n números primos
+        while (contador < n) {
+            if (esPrimo(num)) {
+                System.out.println(num);
+                contador++;
+            }
+            num++;
+        }
+        scanner.close();
+    }
+
+    // Función para verificar si un número es primo
+    public static boolean esPrimo(int num) {
+        if (num <= 1) return false;
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) return false;
+        }
+        return true;
+    }
+}
